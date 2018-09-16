@@ -5,6 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace AddImageSlideShowUsingSlideShowAndCSharp
 {
@@ -21,7 +24,15 @@ namespace AddImageSlideShowUsingSlideShowAndCSharp
         private void LoadImageData()
         {
             DataSet ds = new DataSet();
-            ds.ReadXml(Server.MapPath("~/Data/ImageData.xml"));
+            //  ds.ReadXml(Server.MapPath("~/Data/ImageData.xml"));
+
+
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection con = new SqlConnection(CS);
+            SqlDataAdapter da = new SqlDataAdapter("spGetImageData", con);
+            da.Fill(ds, "image");
+
+
             ViewState["ImageData"] = ds;
 
             ViewState["ImageDisplayed"] = 1;
