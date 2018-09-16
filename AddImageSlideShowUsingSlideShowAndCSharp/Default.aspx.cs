@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,42 +14,40 @@ namespace AddImageSlideShowUsingSlideShowAndCSharp
         {
             if (!IsPostBack)
             {
-                SetImageUrl();
+                LoadImageData();
             }
         }
 
-        private void SetImageUrl()
+        private void LoadImageData()
         {
-            if (ViewState["ImageDisplayed"] == null)
+            DataSet ds = new DataSet();
+            ds.ReadXml(Server.MapPath("~/Data/ImageData.xml"));
+            ViewState["ImageData"] = ds;
+
+            ViewState["ImageDisplayed"] = 1;
+            DataRow imageDataRow = ds.Tables["image"].Select().FirstOrDefault(x => x["order"].ToString() == "1");
+            Image1.ImageUrl = "~/Images/" + imageDataRow["name"].ToString();
+            lblImageName.Text = imageDataRow["name"].ToString();
+            lblImageOrder.Text = imageDataRow["order"].ToString();
+        }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            int i = (int)ViewState["ImageDisplayed"];
+            i = i + 1;
+            ViewState["ImageDisplayed"] = i;
+
+            DataRow imageDataRow = ((DataSet)ViewState["ImageData"]).Tables["image"].Select().FirstOrDefault(x => x["order"].ToString() == i.ToString());
+            if (imageDataRow != null)
             {
-                Image1.ImageUrl = "~/Images/1.jpg";
-                ViewState["ImageDisplayed"] = 1;
-                Label1.Text = "Displaying Image - 1";
+                Image1.ImageUrl = "~/Images/" + imageDataRow["name"].ToString();
+                lblImageName.Text = imageDataRow["name"].ToString();
+                lblImageOrder.Text = imageDataRow["order"].ToString();
             }
             else
             {
-                int i = (int)ViewState["ImageDisplayed"];
-                if (i == 8)
-                {
-                    Image1.ImageUrl = "~/Images/1.jpg";
-                    ViewState["ImageDisplayed"] = 1;
-                    Label1.Text = "Displaying Image - 1";
-                }
-                else
-                {
-                    i = i + 1;
-                    Image1.ImageUrl = "~/Images/" + i.ToString() + ".jpg";
-                    ViewState["ImageDisplayed"] = i;
-                    Label1.Text = "Displaying Image - " + i.ToString();
-                }
+                LoadImageData();
             }
-        }
-
-        // This event is raised every one second as we have set
-        // the interval to 1000 milliseconds
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-            SetImageUrl();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -56,13 +55,12 @@ namespace AddImageSlideShowUsingSlideShowAndCSharp
             if (Timer1.Enabled)
             {
                 Timer1.Enabled = false;
-                Button1.Text = "Start SlideShow";
+                Button1.Text = "Start Slideshow";
             }
             else
             {
                 Timer1.Enabled = true;
-                Button1.Text = "Stop SlideShow";
-
+                Button1.Text = "Stop Slideshow";
             }
         }
     }

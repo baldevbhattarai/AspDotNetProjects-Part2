@@ -8,9 +8,11 @@
         <ContentTemplate>
             <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>
             <br />
-            <asp:Image ID="Image1" Hight="400px" Width="400px" runat="server" />
+            <asp:Image ID="Image1" Hight="200px" Width="200px" runat="server" />
             <br />
-            <asp:Label ID="Label1" runat="server"></asp:Label>
+           Name: <asp:Label ID="lblImageName" runat="server"></asp:Label> 
+            <br />
+           Order: <asp:Label ID="lblImageOrder" runat="server"></asp:Label>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" Text="Stop SlideShow" OnClick="Button1_Click" />

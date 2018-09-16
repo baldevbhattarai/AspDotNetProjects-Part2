@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Images>
+  <image name="Chrysanthemum.jpg" order="1"></image>
+  <image name="Desert.jpg" order="2"></image>
+  <image name="Hydrangeas.jpg" order="3"></image>
+  <image name="Jellyfish.jpg" order="4"></image>
+  <image name="Koala.jpg" order="5"></image>
+  <image name="Lighthouse.jpg" order="6"></image>
+  <image name="Penguins.jpg" order="7"></image>
+  <image name="Tulips.jpg" order="8"></image>
+  <image name="ninth.jpg" order="9"></image>
+  <image name="tenth.jpg" order="10"></image>
+</Images>
+
