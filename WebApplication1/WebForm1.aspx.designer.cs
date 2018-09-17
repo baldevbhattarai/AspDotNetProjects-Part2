@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AddImageSlideShowUsingSlideShowAndCSharp
+namespace WebApplication1
 {
 
 

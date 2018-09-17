@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="AddImageSlideShowUsingSlideShowAndCSharp.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -9,8 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            abc
-
+            gfhfg
         </div>
     </form>
 </body>
