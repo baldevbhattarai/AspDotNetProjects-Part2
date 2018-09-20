@@ -36,5 +36,13 @@ namespace PassingDataFromContentPageToMasterPage
                 return btnSearch;
             }
         }
+        public TextBox TextBoxOnMasterPage
+        {
+            get
+            {
+                // Return the textbox on the master page
+                return this.txtBoxOnMasterPage;
+            }
+        }
     }
 }

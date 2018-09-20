@@ -22,6 +22,8 @@
             <tr>
                 <td style="height: 500px; background-color: #D8D8D8; width: 150px">
                     <h3>Menu</h3>
+                    <asp:TextBox ID="txtBoxOnMasterPage" runat="server"></asp:TextBox>
+
                 </td>
                 <td style="height: 500px; background-color: #E6E6E6; width: 650px">
                     <asp:ContentPlaceHolder ID="MainContent" runat="server">

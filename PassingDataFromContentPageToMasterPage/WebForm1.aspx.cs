@@ -42,5 +42,10 @@ namespace PassingDataFromContentPageToMasterPage
                 GridView1.DataBind();
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            ((Site)Master).TextBoxOnMasterPage.Text = TextBox1.Text;
+        }
     }
 }
