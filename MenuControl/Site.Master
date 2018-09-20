@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MenuControl.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <%-- <asp:XmlDataSource ID="XmlDataSource1" runat="server"
+            XPath="/Items/MenuItem" DataFile="~/MenuData.xml"></asp:XmlDataSource>--%>
+        <table style="font-family: Arial">
+            <tr>
+                <td colspan="2" style="width: 800px; height: 80px; text-align: center; background-color: #BDBDBD;">
+                    <h1>WebSite Header</h1>
+                    <asp:Panel ID="panelSearch" runat="server">
+                        <b>Search : </b>
+                        <asp:TextBox ID="txtSerach" runat="server"></asp:TextBox>
+                        <asp:Button ID="btnSearch" runat="server" Text="Search" />
+                    </asp:Panel>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 500px; background-color: #D8D8D8; width: 150px">
+                    <asp:Menu ID="Menu1" runat="server" OnPreRender="Menu1_PreRender">
+
+                        <LevelMenuItemStyles>
+                            <%--<asp:MenuItemStyle CssClass="MenuLevel1"/>--%>
+                            <asp:MenuItemStyle BackColor="Red" BorderColor="White" BorderWidth="1px" BorderStyle="Solid" />
+                            <asp:MenuItemStyle BackColor="Gray" BorderColor="White" BorderWidth="1px" BorderStyle="Solid" />
+                        </LevelMenuItemStyles>
+                        <LevelSelectedStyles>
+                            <asp:MenuItemStyle ForeColor="Yellow" />
+                            <asp:MenuItemStyle ForeColor="Maroon" />
+                        </LevelSelectedStyles>
+                        <%-- <DataBindings>
+                            <asp:MenuItemBinding DataMember="MenuItem"
+                                NavigateUrlField="NavigateUrl" TextField="Text" />
+                        </DataBindings>--%>
+                    </asp:Menu>
+
+                </td>
+                <td style="height: 500px; background-color: #E6E6E6; width: 650px">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        <h1>Section that changes on a page by page basis</h1>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color: #BDBDBD; text-align: center">
+                    <b>Website Footer</b>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

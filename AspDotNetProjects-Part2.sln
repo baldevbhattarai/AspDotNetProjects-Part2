@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassingDataFromContentPageT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssigningAMasterPageDynamically", "AssigningAMasterPageDynamically\AssigningAMasterPageDynamically.csproj", "{AA7F1C2F-8A33-4DB1-B8F1-76C76D5579D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuControl", "MenuControl\MenuControl.csproj", "{A51A375D-6E28-475D-A6AE-1E12B2229C52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{AA7F1C2F-8A33-4DB1-B8F1-76C76D5579D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA7F1C2F-8A33-4DB1-B8F1-76C76D5579D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA7F1C2F-8A33-4DB1-B8F1-76C76D5579D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51A375D-6E28-475D-A6AE-1E12B2229C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51A375D-6E28-475D-A6AE-1E12B2229C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51A375D-6E28-475D-A6AE-1E12B2229C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51A375D-6E28-475D-A6AE-1E12B2229C52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
