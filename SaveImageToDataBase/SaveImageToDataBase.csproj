@@ -7,14 +7,14 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A51A375D-6E28-475D-A6AE-1E12B2229C52}</ProjectGuid>
+    <ProjectGuid>{F5C8C6F8-B564-4AFB-BD85-2F80B589D1D8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MenuControl</RootNamespace>
-    <AssemblyName>MenuControl</AssemblyName>
+    <RootNamespace>SaveImageToDataBase</RootNamespace>
+    <AssemblyName>SaveImageToDataBase</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -67,70 +67,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BindingTreeViewWithDataBase.aspx" />
-    <Content Include="Image\favicon.ico" />
-    <Content Include="MenuData.xml" />
+    <Content Include="LoadImageFromDB.aspx" />
+    <Content Include="SaveImageToDB.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Home.aspx" />
-    <Content Include="Employee.aspx" />
-    <Content Include="UploadResume.aspx" />
-    <Content Include="BindingTreeviewControlToWebSitemap.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BindingTreeViewWithDataBase.aspx.cs">
-      <DependentUpon>BindingTreeViewWithDataBase.aspx</DependentUpon>
+    <Compile Include="LoadImageFromDB.aspx.cs">
+      <DependentUpon>LoadImageFromDB.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BindingTreeViewWithDataBase.aspx.designer.cs">
-      <DependentUpon>BindingTreeViewWithDataBase.aspx</DependentUpon>
+    <Compile Include="LoadImageFromDB.aspx.designer.cs">
+      <DependentUpon>LoadImageFromDB.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
+    <Compile Include="SaveImageToDB.aspx.cs">
+      <DependentUpon>SaveImageToDB.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Employee.aspx.cs">
-      <DependentUpon>Employee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Employee.aspx.designer.cs">
-      <DependentUpon>Employee.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UploadResume.aspx.cs">
-      <DependentUpon>UploadResume.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UploadResume.aspx.designer.cs">
-      <DependentUpon>UploadResume.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BindingTreeviewControlToWebSitemap.aspx.cs">
-      <DependentUpon>BindingTreeviewControlToWebSitemap.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BindingTreeviewControlToWebSitemap.aspx.designer.cs">
-      <DependentUpon>BindingTreeviewControlToWebSitemap.aspx</DependentUpon>
+    <Compile Include="SaveImageToDB.aspx.designer.cs">
+      <DependentUpon>SaveImageToDB.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="Web.sitemap" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -145,9 +110,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>63325</DevelopmentServerPort>
+          <DevelopmentServerPort>56014</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/MenuControl</IISUrl>
+          <IISUrl>http://localhost:56014/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
